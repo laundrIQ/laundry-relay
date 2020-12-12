@@ -18,7 +18,7 @@ const createSkeleton = () => {
     }, null, 2));
 };
 
-const getSettings = async () => {
+const getSettings = () => {
     return JSON.parse(fs.readFileSync(settingsPath));
 };
 
