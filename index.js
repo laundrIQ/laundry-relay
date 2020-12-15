@@ -67,6 +67,9 @@ app.post('/log', (req, res) => {
     try {
         const batteryStatus = getBatteryStatus(req.headers);
         console.log(`--- ${req.body.reader} | ${req.body.beacons.length} | ${new Date().toLocaleTimeString()} | ${batteryStatus} ---`);
+        if (config.debug) {
+            console.log(req.body);
+        }
         watcher.registerReading(req.body);
     }
     catch (error) {

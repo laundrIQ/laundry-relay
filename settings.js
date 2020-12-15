@@ -10,6 +10,7 @@ const settingsExist = () => {
 const createSkeleton = () => {
     fs.writeFileSync(settingsPath, JSON.stringify({
         port: 5000,
+        debug: false,
         influx: {
             host: 'localhost',
             port: 8086,
